@@ -132,9 +132,9 @@ To enable server side rendering demo on the SPA demo site, simply:
     * `AIO_RUNTIME_NAMESPACE` your namespace
     * `AIO_RUNTIME_AUTH` the authentication token
     
-* For local deployment: `cd examples/react-spa-components && npm run build-adobeio && npm run start-ssr-ioruntime`
+* For local deployment: `cd react-spa-components && npm run build-adobeio && npm run start-ssr-ioruntime`
 * For remote deployment: 
-  * 1: `cd examples/react-spa-components && npm run build-adobeio && npm run deploy-to-runtime`
+  * 1: `cd react-spa-components && npm run build-adobeio && npm run deploy-to-runtime`
   * 2: change the com.adobe.cq.wcm.core.examples.react.components.ssr.impl.SSRRenderingServiceImpl to add in the authentication header and use the adjusted URL.
 
 You can deploy the files from dist/serverBuild to your nodeJS, adobeIO or AWS lambda instance and change your rendering endpoint in OSGI to render from the cloud.
