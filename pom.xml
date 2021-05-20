@@ -89,7 +89,7 @@
         <node.version>v10.13.0</node.version>
         <npm.version>6.4.1</npm.version>
         <bnd.version>5.3.0</bnd.version>
-        <core.wcm.components.version>2.16.0</core.wcm.components.version>
+        <core.wcm.components.version>2.15.2</core.wcm.components.version>
         <aio.runtime.namespace>${env.AIO_RUNTIME_NAMESPACE}</aio.runtime.namespace>
         <aio.runtime.auth>${env.AIO_RUNTIME_AUTH}</aio.runtime.auth>
         <componentGroupName>React WCM Components</componentGroupName>
