@@ -6,7 +6,9 @@
 The React implementation for [AEM core components](https://github.com/adobe/aem-core-wcm-components). 
 Provides either ready to use / extend components, or if you choose to write your own, a good reference to get started.
 
-
+Uses the following NPM modules:
+#### [React core components - base](https://github.com/adobe/aem-react-core-wcm-components-base)
+#### [React core components - spa](https://github.com/adobe/aem-react-core-wcm-components-spa)
 
 ## Welcome
 
