@@ -55,8 +55,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 @Model(adaptables = SlingHttpServletRequest.class, adapters = {HierarchyPage.class, ContainerExporter.class}, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = {
-        HierarchyPageImpl.RESOURCE_TYPE,
-        HierarchyPageImpl.XF_RESOURCE_TYPE
+        HierarchyPageImpl.RESOURCE_TYPE
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 @JsonSerialize(as = HierarchyPage.class)
