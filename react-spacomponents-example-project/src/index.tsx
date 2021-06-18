@@ -48,7 +48,7 @@ DOMReady( ()=> {
 
     const render = (model: Model) => {
 
-        const rootDiv = document.getElementById('root');
+        const rootDiv = document.getElementById('spa-root');
 
         const Root = <BrowserRouter>
             <App

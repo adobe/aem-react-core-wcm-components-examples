@@ -18,7 +18,7 @@ import React from 'react';
 import { Page, withModel, PageProperties, ContainerState} from '@adobe/aem-react-editable-components';
 
 // This component is the application entry point
-class App extends Page<PageProperties, ContainerState> {
+class SpaApp extends Page<PageProperties, ContainerState> {
 
     render() {
         return (
@@ -30,4 +30,4 @@ class App extends Page<PageProperties, ContainerState> {
     }
 }
 
-export default withModel(App);
+export default withModel(SpaApp);

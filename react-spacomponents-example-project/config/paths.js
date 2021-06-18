@@ -1,3 +1,4 @@
+
 /*
  *  Copyright 2020 Adobe
  *
@@ -39,7 +40,7 @@ function ensureSlash(inputPath, needsSlash) {
 }
 
 const getPublicUrl = appPackageJson =>
-      envPublicUrl || require(appPackageJson).homepage;
+    envPublicUrl || require(appPackageJson).homepage;
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
@@ -50,7 +51,7 @@ const getPublicUrl = appPackageJson =>
 function getServedPath(appPackageJson) {
     const publicUrl = getPublicUrl(appPackageJson);
     const servedUrl =
-          envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
+        envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
     return ensureSlash(servedUrl, true);
 }
 
@@ -71,8 +72,8 @@ const moduleFileExtensions = [
 // Resolve file paths in the same order as webpack
 const resolveModule = (resolveFn, filePath) => {
     const extension = moduleFileExtensions.find(extension =>
-                                                fs.existsSync(resolveFn(`${filePath}.${extension}`))
-                                               );
+        fs.existsSync(resolveFn(`${filePath}.${extension}`))
+    );
 
     if (extension) {
         return resolveFn(`${filePath}.${extension}`);
@@ -106,7 +107,3 @@ module.exports = {
     clientLibRelativePath: clientLibRelativePath,
     clientLibRoot: clientLibRoot
 };
-
-
-
-module.exports.moduleFileExtensions = moduleFileExtensions;

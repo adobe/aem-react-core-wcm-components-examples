@@ -25,7 +25,5 @@ coverage
 
 react-app-env.d.ts
 *.tsbuildinfo
-ui.apps/src/main/content/jcr_root/apps/core-components-examples/wcm-react/clientlibs/react-spacomponents/resources/*
+ui.apps/src/main/content/jcr_root/apps/core-components-examples/wcm-react/clientlibs/react-spacomponents
 !ui.apps/src/main/content/jcr_root/apps/core-components-examples/wcm-react/clientlibs/react-spacomponents/resources/stats.json
-
-ui.apps/src/main/content/jcr_root/apps/core-components-examples/wcm-react/clientlibs/react-webcomponents/resources

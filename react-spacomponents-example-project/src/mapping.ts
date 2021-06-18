@@ -27,7 +27,7 @@ import {
 import withAsyncImport from "./utils/withAsyncImport";
 
 import withRoute from './utils/RouteHelper';
-import ContribPage from './components/Page';
+import SpaPage from './components/Page';
 import Demo, {DemoContainerProperties} from './components/demo/Demo';
 import Json, {JsonProperties} from './components/demo/Json';
 import Markup, {MarkupProperties} from "./components/demo/Markup";
@@ -94,5 +94,5 @@ MapTo<PropertiesModel>('core-components-examples/wcm-react/components/demo/prope
 MapTo<MarkupProperties>('core-components-examples/wcm-react/components/demo/markup')(Markup);
 MapTo<DemoContainerProperties>('core-components-examples/wcm-react/components/demo')(Demo);
 MapTo<ContainerProperties>('core-components-examples/wcm-react/components/demo/component')(Container);
-MapTo<PageProperties>('core-components-examples/wcm-react/components/page/react-spacomponents-page')(withRoute(ContribPage));
+MapTo<PageProperties>('core-components-examples/wcm-react/components/page/react-spacomponents-page')(withRoute(SpaPage));
 
