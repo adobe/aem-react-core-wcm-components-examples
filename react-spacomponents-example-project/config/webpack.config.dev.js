@@ -69,7 +69,7 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 module.exports = {
     mode: 'development',
     bail: true,
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
 
     entry: [
         paths.appIndexJs,
