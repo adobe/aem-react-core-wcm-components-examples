@@ -15,13 +15,18 @@
  */
 
 import React from 'react';
-import {Container,ContainerProperties,ContainerState} from '@adobe/aem-react-editable-components';
+import {
+    AllowedComponentsContainer, AllowedComponentsProperties,
+    Container,
+    ContainerProperties,
+    ContainerState
+} from '@adobe/aem-react-editable-components';
 
-export interface DemoContainerProperties extends ContainerProperties{
+export interface DemoContainerProperties extends AllowedComponentsProperties{
     fullWidth: boolean
 }
 
-class Demo extends Container<DemoContainerProperties,ContainerState> {
+class Demo extends AllowedComponentsContainer<DemoContainerProperties,ContainerState> {
 
     /**
      * The properties that will be injected in the root element of the container
