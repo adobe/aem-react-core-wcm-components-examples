@@ -26,8 +26,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    
-<!--    <packaging>bundle</packaging>-->
+
     <artifactId>core.wcm.components.examples.react.bundle</artifactId>
     <name>Adobe Experience Manager Core WCM Components - React Examples - Bundle</name>
     
@@ -222,6 +221,14 @@ Import-Package: javax.annotation;version=0.0.0,*
                     <groupId>com.adobe.cq</groupId>
                     <artifactId>core.wcm.components.core</artifactId>
                 </dependency>
+                <dependency>
+                    <groupId>com.adobe.acs</groupId>
+                    <artifactId>acs-aem-commons-bundle</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>biz.aQute.bnd</groupId>
+                    <artifactId>bndlib</artifactId>
+                </dependency>
             </dependencies>
         </profile>
         
@@ -311,7 +318,14 @@ Import-Package: javax.annotation;version=0.0.0,*
                     <groupId>org.apache.sling</groupId>
                     <artifactId>org.apache.sling.models.api</artifactId>
                 </dependency>
-                
+                <dependency>
+                    <groupId>com.adobe.acs</groupId>
+                    <artifactId>acs-aem-commons-bundle</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>biz.aQute.bnd</groupId>
+                    <artifactId>bndlib</artifactId>
+                </dependency>
             </dependencies>
         </profile>
     </profiles>
@@ -479,6 +493,12 @@ Import-Package: javax.annotation;version=0.0.0,*
                 <type>zip</type>
                 <version>${core.wcm.components.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>${acs.commons.version}</version>
+                <scope>provided</scope>
+            </dependency>
          
             <!-- Testing -->
             <dependency>
@@ -517,6 +537,12 @@ Import-Package: javax.annotation;version=0.0.0,*
                 <artifactId>slf4j-test</artifactId>
                 <version>1.2.0</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bndlib</artifactId>
+                <version>2.4.0</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

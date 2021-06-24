@@ -71,6 +71,18 @@
                             <target>/apps/core-components-examples/wcm-react/application/install</target>
                         </embedded>
                     </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-ui.apps</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-ui.content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                     <packageType>container</packageType>
                 </configuration>
             </plugin>
@@ -201,6 +213,25 @@
                                     <type>zip</type>
                                     <target>/apps/core-components-examples/wcm-react/application/install</target>
                                 </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.aem</groupId>
+                                    <artifactId>spa.project.core.all</artifactId>
+                                    <type>zip</type>
+                                    <target>/apps/core-components-examples/wcm-react/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.acs</groupId>
+                                    <artifactId>acs-aem-commons-ui.apps</artifactId>
+                                    <type>zip</type>
+                                    <target>/apps/core-components-examples/wcm-react/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.acs</groupId>
+                                    <artifactId>acs-aem-commons-ui.content</artifactId>
+                                    <type>zip</type>
+                                    <target>/apps/core-components-examples/wcm-react/application/install</target>
+                                </embedded>
+
                             </embeddeds>
                             <subPackages>
                                 <subPackage>
@@ -249,6 +280,23 @@
             <artifactId>core.wcm.components.all</artifactId>
             <type>zip</type>
         </dependency>
-       
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.all</artifactId>
+            <version>1.0.4</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-ui.content</artifactId>
+            <version>${acs.commons.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-ui.apps</artifactId>
+            <version>${acs.commons.version}</version>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 </project>
