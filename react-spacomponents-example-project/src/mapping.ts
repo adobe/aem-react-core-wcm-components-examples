@@ -16,7 +16,18 @@
 
 import {MapTo, Container, MappedComponentProperties, ContainerProperties, PageProperties} from '@adobe/aem-react-editable-components';
 
-import {TitleV2IsEmptyFn, ListV2IsEmptyFn, BreadCrumbV2IsEmptyFn, TextV2IsEmptyFn, ButtonV1IsEmptyFn, ImageV2IsEmptyFn, TeaserV1IsEmptyFn, DownloadV1IsEmptyFn, SeparatorV1IsEmptyFn} from "@adobe/aem-core-components-react-base/dist/isEmptyFunctions";
+import {
+    TitleV2IsEmptyFn,
+    ListV2IsEmptyFn,
+    BreadCrumbV2IsEmptyFn,
+    TextV2IsEmptyFn,
+    ButtonV1IsEmptyFn,
+    ImageV2IsEmptyFn,
+    TeaserV1IsEmptyFn,
+    DownloadV1IsEmptyFn,
+    SeparatorV1IsEmptyFn,
+    DefaultV1IsEmptyFn
+} from "@adobe/aem-core-components-react-base/dist/isEmptyFunctions";
 import {
     AccordionV1IsEmptyFn,
     CarouselV1IsEmptyFn,
@@ -41,10 +52,11 @@ import {
     ButtonV1Model,
     TeaserV1Model,
     ImageV2Model,
-    TitleV2Model
+    TitleV2Model, DefaultV1Component, DefaultV1Model
 } from '@adobe/aem-core-components-react-base';
 
 import {TabsV1Properties, AccordionV1Properties, CarouselV1Properties, ContainerV1Properties} from '@adobe/aem-core-components-react-spa';
+import SimpleComponent, {SimpleComponentModel} from "./components/demo/SimpleComponent";
 
 
 const TitleV2 = withAsyncImport(() => import(/* webpackChunkName: "TitleV2" */ '@adobe/aem-core-components-react-base/dist/authoring/title/v2/TitleV2'));
@@ -79,6 +91,9 @@ MapTo<ImageV2Model & p>('core-components-examples/wcm-react/components/image')(I
 MapTo<TitleV2Model & p>('core-components-examples/wcm-react/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
 
 
+
+MapTo<DefaultV1Model & p>('core-components-examples/wcm-react/components/normalcomponent')(DefaultV1Component, {isEmpty: DefaultV1IsEmptyFn})
+MapTo<SimpleComponentModel & p>('core-components-examples/wcm-react/components/simplecomponent')(SimpleComponent);
 
 
 MapTo('core-components-examples/wcm-react/components/navigation')(NavigationV1);

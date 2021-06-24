@@ -93,6 +93,7 @@
         <aio.runtime.namespace>${env.AIO_RUNTIME_NAMESPACE}</aio.runtime.namespace>
         <aio.runtime.auth>${env.AIO_RUNTIME_AUTH}</aio.runtime.auth>
         <componentGroupName>React WCM Components</componentGroupName>
+        <acs.commons.version>5.0.4</acs.commons.version>
     </properties>
 
     <!-- ====================================================================== -->
