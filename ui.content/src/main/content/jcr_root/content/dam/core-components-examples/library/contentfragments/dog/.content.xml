@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="77a401a7-80f0-45a3-8244-e9a66f9c0101">
+    <jcr:content
+        cq:name="dog"
+        cq:parentPath="/content/dam/core-components-examples/library/contentfragments"
+        jcr:lastModified="{Date}2021-06-27T09:13:17.016+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Dog"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-06-27T09:13:17.016+02:00">
+        <data
+            cq:model="/conf/aem-react-core-spacomponents-example/settings/dam/cfm/models/animal"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                breed="Golden retriever"
+                breed_x0040_LastModified="{Date}2021-06-27T09:13:16.945+02:00"
+                description="&lt;p>The cutest!&lt;/p>&#xa;"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2021-06-27T09:13:16.945+02:00"
+                type="Dog"
+                type_x0040_LastModified="{Date}2021-06-27T09:13:16.945+02:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

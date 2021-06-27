@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="45356c84-6c6d-4061-8c94-58bee09d60bd">
+    <jcr:content
+        cq:name="example-fragment"
+        cq:parentPath="/content/dam/core-components-examples/library/contentfragments"
+        jcr:lastModified="{Date}2021-06-27T09:02:17.700+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="example-fragment"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-06-27T09:02:17.700+02:00">
+        <data
+            cq:model="/conf/aem-react-core-spacomponents-example/settings/dam/cfm/models/office"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                city="Basel"
+                city_x0040_LastModified="{Date}2021-06-27T09:02:17.686+02:00"
+                country="Switserland"
+                country_x0040_LastModified="{Date}2021-06-27T09:02:17.686+02:00"
+                postalCode="4051"
+                postalCode_x0040_LastModified="{Date}2021-06-27T09:02:17.686+02:00"
+                region_x0040_LastModified="{Date}2021-06-27T09:01:21.436+02:00"
+                streetAddress="Barfusserplatz "
+                streetAddress_x0040_ContentType="text/plain"
+                streetAddress_x0040_LastModified="{Date}2021-06-27T09:02:17.685+02:00"
+                title="Test Content Fragment"
+                title_x0040_LastModified="{Date}2021-06-27T09:02:17.685+02:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
