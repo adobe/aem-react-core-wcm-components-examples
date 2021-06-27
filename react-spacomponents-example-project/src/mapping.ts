@@ -31,7 +31,7 @@ import {
 import {
     AccordionV1IsEmptyFn,
     CarouselV1IsEmptyFn,
-    ContainerV1IsEmptyFn,
+    ContainerV1IsEmptyFn, ContentFragmentV1IsEmptyFn,
     TabsV1IsEmptyFn
 } from "@adobe/aem-core-components-react-spa/dist/isEmptyFunctions";
 
@@ -55,7 +55,7 @@ import {
     TitleV2Model, DefaultV1Component, DefaultV1Model
 } from '@adobe/aem-core-components-react-base';
 
-import {TabsV1Properties, AccordionV1Properties, CarouselV1Properties, ContainerV1Properties} from '@adobe/aem-core-components-react-spa';
+import {ContentFragmentV1, ContentFragmentV1Properties, MapToContentFragmentModel, TabsV1Properties, AccordionV1Properties, CarouselV1Properties, ContainerV1Properties} from '@adobe/aem-core-components-react-spa';
 import SimpleComponent, {SimpleComponentModel} from "./components/demo/SimpleComponent";
 
 
@@ -76,9 +76,16 @@ const TabsV1 = withAsyncImport(() => import(/* webpackChunkName: "TabsV1" */ '@a
 const CarouselV1 = withAsyncImport(() => import(/* webpackChunkName: "CarouselV1" */ '@adobe/aem-core-components-react-spa/dist/container/carousel/v1/CarouselV1'));
 const AccordionV1 = withAsyncImport(() => import(/* webpackChunkName: "AccordionV1" */ '@adobe/aem-core-components-react-spa/dist/container/accordion/v1/AccordionV1'));
 
+const ExampleContentFragmentImpl = withAsyncImport(() => import(/* webpackChunkName: "ExampleContentFragmentImpl" */ './components/demo/ExampleContentFragmentImpl'));
+
+
 type p = MappedComponentProperties;
 
 
+
+
+
+MapTo<ContentFragmentV1Properties & p>('core-components-examples/wcm-react/components/content-fragment')(ContentFragmentV1, {isEmpty: ContentFragmentV1IsEmptyFn});
 MapTo<ContainerProperties & p>('core-components-examples/wcm-react/components/experience-fragment')(Container, {isEmpty: ( props ) => props.cqItemsOrder && props.cqItemsOrder.length > 0});
 MapTo<DownloadV1Model & p>('core-components-examples/wcm-react/components/download')(DownloadV1, {isEmpty: DownloadV1IsEmptyFn});
 MapTo<ListV2Model & p>('core-components-examples/wcm-react/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
@@ -91,6 +98,7 @@ MapTo<ImageV2Model & p>('core-components-examples/wcm-react/components/image')(I
 MapTo<TitleV2Model & p>('core-components-examples/wcm-react/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
 
 
+MapTo<DefaultV1Model & p>('core-components-examples/wcm-react/components/normalcomponent')(DefaultV1Component, {isEmpty: DefaultV1IsEmptyFn})
 
 MapTo<DefaultV1Model & p>('core-components-examples/wcm-react/components/normalcomponent')(DefaultV1Component, {isEmpty: DefaultV1IsEmptyFn})
 MapTo<SimpleComponentModel & p>('core-components-examples/wcm-react/components/simplecomponent')(SimpleComponent);
@@ -111,3 +119,5 @@ MapTo<DemoContainerProperties>('core-components-examples/wcm-react/components/de
 MapTo<ContainerProperties>('core-components-examples/wcm-react/components/demo/component')(Container);
 MapTo<PageProperties>('core-components-examples/wcm-react/components/page/react-spacomponents-page')(withRoute(ContribPage));
 
+//here we map our model explicitly to one of our implementations.
+MapToContentFragmentModel("aem-react-core-spacomponents-example/models/animal")(ExampleContentFragmentImpl);
