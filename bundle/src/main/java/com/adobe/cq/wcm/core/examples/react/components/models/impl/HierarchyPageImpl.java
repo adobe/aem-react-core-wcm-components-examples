@@ -15,6 +15,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package com.adobe.cq.wcm.core.examples.react.components.models.impl;
 
+import com.adobe.acs.commons.errorpagehandler.ErrorPageHandlerService;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ContainerExporter;
 import com.adobe.cq.export.json.ExporterConstants;
@@ -39,12 +40,13 @@ import org.apache.sling.api.wrappers.SlingHttpServletRequestWrapper;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.factory.ModelFactory;
 
 
-
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -53,6 +55,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+
+import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 @Model(adaptables = SlingHttpServletRequest.class, adapters = {HierarchyPage.class, ContainerExporter.class}, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL, resourceType = {
         HierarchyPageImpl.RESOURCE_TYPE,
@@ -132,7 +136,7 @@ public class HierarchyPageImpl implements HierarchyPage {
     private SlingModelFilter slingModelFilter;
     
     @JsonIgnore
-    private Map<String, ? extends HierarchyPage> childPages = null;
+    private Map<String, HierarchyPage> childPages = null;
     
     @JsonIgnore
     private Map<String, ComponentExporter> childModels = null;
@@ -149,19 +153,37 @@ public class HierarchyPageImpl implements HierarchyPage {
     @JsonIgnore
     protected Style currentStyle;
 
+    @OSGiService
+    private ErrorPageHandlerService errorPageHandlerService;
 
     @Override
     public String getExportedHierarchyType() {
         return HierarchyTypes.PAGE;
     }
 
+    private String errorPagePath;
+    private String errorCausePageName;
+
+    @PostConstruct
+    public void init(){
+        errorPagePath = request.getRequestParameter("errorPagePath") != null ? request.getRequestParameter("errorPagePath").getString() : "";
+        errorCausePageName = request.getRequestParameter("errorCausePageName") != null ? request.getRequestParameter("errorCausePageName").getString() : "";
+    }
 
     @Override
-    @JsonInclude(JsonInclude.Include.ALWAYS)
+    @JsonInclude
     public Map<String, ? extends HierarchyPage> getExportedChildren() {
         if (childPages == null) {
             childPages = getChildPageModels(request, HierarchyPage.class);
         }
+
+        if(isNotBlank(errorPagePath)){
+            Resource errorPageResource = resolver.getResource(errorPagePath);
+            SlingRequestWithResourceWrapper forwardRequest = new SlingRequestWithResourceWrapper(request, errorPageResource);
+            HierarchyPage adaptedErrorPage = forwardRequest.adaptTo(HierarchyPage.class);
+            childPages.put(errorCausePageName, adaptedErrorPage);
+        }
+
         return childPages;
     }
 

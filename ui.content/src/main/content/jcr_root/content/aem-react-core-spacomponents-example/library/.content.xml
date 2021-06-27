@@ -3,7 +3,7 @@
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="cq:Page">
     <jcr:content
-            errorPages="/content/aem-react-core-spacomponents-example/errorpages"
+            errorPages="/content/aem-react-core-spacomponents-example/library/errorpages"
             cq:lastModified="{Date}2019-05-29T18:25:56.781+03:00"
             cq:lastModifiedBy="admin"
             cq:template="/conf/aem-react-core-spacomponents-example/settings/wcm/templates/contrib-spa-app-template"
