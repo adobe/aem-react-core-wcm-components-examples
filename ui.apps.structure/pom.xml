@@ -37,6 +37,9 @@
                     <filters>
                         <!-- /apps root -->
                         <filter><root>/apps</root></filter>
+                        <filter><root>/apps/sling</root></filter>
+                        <filter><root>/apps/sling/servlet</root></filter>
+                        <filter><root>/apps/sling/servlet/errorhandler</root></filter>
                         <filter><root>/apps/core-components-examples</root></filter>
                         <filter><root>/apps/core-components-examples/wcm-react</root></filter>
                         <filter><root>/apps/core-components-examples/osgiconfig-react</root></filter>
