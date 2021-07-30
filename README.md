@@ -93,6 +93,12 @@ Cloud:
     
 Important: It is known that the core components examples package removes the examples installed in this package due to their package filter.
 This needs to be addressed later.
+
+Note: 
+There is currently a known bug that requires you to manually activate the bundle after first installation.
+After installation go to http://localhost:4502/system/console/bundles
+
+And search for "Adobe Experience Manager Core WCM Components - React Examples - Bundle" - and activate it.
     
     
 You can also install individual packages/bundles by issuing the following command in the top-level folder of the project:

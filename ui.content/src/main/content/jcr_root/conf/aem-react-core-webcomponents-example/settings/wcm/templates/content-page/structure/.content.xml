@@ -40,40 +40,6 @@
                     linkURL="/content/aem-react-core-webcomponents-example/library"
                     titleValueFromDAM="true"/>
             </responsivegrid_1409995310>
-            <responsivegrid_1755067073
-                cq:styleIds="[1545309119491]"
-                jcr:created="{Date}2018-12-20T12:31:05.318Z"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2018-12-20T12:31:05.318Z"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
-                <image_1442382866_cop
-                    jcr:created="{Date}2019-01-08T17:48:01.449+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2019-01-09T17:58:39.148+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="core/wcm/components/image/v2/image"
-                    altValueFromDAM="true"
-                    displayPopupTitle="true"
-                    fileReference="/content/dam/core-components-examples/library/aem-corecomponents-logo.svg"
-                    isDecorative="false"
-                    linkURL="/content/aem-react-core-webcomponents-example/library"
-                    titleValueFromDAM="true"/>
-                <navigation
-                    jcr:created="{Date}2018-12-20T12:48:21.218Z"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-20T12:48:37.608Z"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="core/wcm/components/navigation/v1/navigation"
-                    collectAllPages="false"
-                    navigationRoot="/content/aem-react-core-webcomponents-example/library"
-                    skipNavigationRoot="true"
-                    structureDepth="1"/>
-            </responsivegrid_1755067073>
             <responsivegrid
                 cq:styleIds="[1545309110033]"
                 jcr:created="{Date}2018-12-20T12:31:03.201Z"
