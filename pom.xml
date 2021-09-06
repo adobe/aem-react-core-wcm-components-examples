@@ -524,7 +524,7 @@ Bundle-DocURL:
             <id>autoInstallBundle</id>
 
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
 
             <build>
@@ -558,7 +558,7 @@ Bundle-DocURL:
 
             <id>autoInstallPackage</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
 
             <build>

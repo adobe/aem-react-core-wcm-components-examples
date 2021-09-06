@@ -85,14 +85,11 @@ To compile your own version of the React Core Components, you can build and inst
 
 Cloud:
 
-    mvn clean install -PautoInstallPackage -PautoInstallSinglePackage  -PautoInstallBundle -Pcloud 
+    mvn clean install -Pcloud
     
 6.5.8+:
 
-    mvn clean install -PautoInstallPackage -PautoInstallSinglePackage -PautoInstallBundle -Pclassic 
-    
-Important: It is known that the core components examples package removes the examples installed in this package due to their package filter.
-This needs to be addressed later.
+    mvn clean install -Pclassic
 
 Note: 
 There is currently a known bug that requires you to manually activate the bundle after first installation.

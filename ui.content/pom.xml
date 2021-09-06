@@ -125,9 +125,6 @@
     <profiles>
         <profile>
             <id>autoInstallSinglePackage</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -151,9 +148,6 @@
         </profile>
         <profile>
             <id>autoInstallSinglePackagePublish</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -177,9 +171,6 @@
         </profile>
         <profile>
             <id>autoInstallPackage</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -203,9 +194,6 @@
         </profile>
         <profile>
             <id>autoInstallPackagePublish</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
